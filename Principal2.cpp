@@ -136,62 +136,7 @@ int main() {
     }
     cout << "\nMayor cantidad de sintomas registrada en un solo paciente: " << maxSintomas << endl;
 
-    // Inciso i
-    int countBajoPoco = 0;
-    for (int i = 0; i < cantidadPacientes; ++i) {
-        if (hospital[i].nombreGravedad == "Bajo observacion" || hospital[i].nombreGravedad == "Poco Grave") {
-            countBajoPoco++;
-        }
-    }
-    if (cantidadPacientes > 0) {
-        double porcentaje = ((double)countBajoPoco / cantidadPacientes) * 100.0;
-        cout << "Porcentaje de pacientes Bajo observacion y Poco Grave: " << porcentaje << "%" << endl;
-    }
-
-    // Inciso j
-    cout << "\n--- Relacion de Equivalencia (Muestra de 5 pacientes) ---" << endl;
-    if (cantidadPacientes >= 5) {
-        // Seleccion arbitraria sin libreria random: tomamos los indices usando modulo para variar
-        vector<int> seleccionados;
-        for (int k = 0; k < 5; k++) {
-            int indiceSimulado = (k * 2) % cantidadPacientes; // Formula simple para variar seleccion
-            seleccionados.push_back(indiceSimulado);
-        }
-
-        bool hayEquivalencia = false;
-        for (int i = 0; i < 5; i++) {
-            for (int j = i + 1; j < 5; j++) {
-                int p1 = seleccionados[i];
-                int p2 = seleccionados[j];
-                // Solo comparamos si son indices distintos de pacientes
-                if (p1 != p2 && hospital[p1].totalSintomas == hospital[p2].totalSintomas) {
-                    cout << "Paciente " << p1 + 1 << " es equivalente a Paciente " << p2 + 1
-                         << " (Mismo numero de sintomas: " << hospital[p1].totalSintomas << ")" << endl;
-                    hayEquivalencia = true;
-                }
-            }
-        }
-        if (!hayEquivalencia) cout << "No se encontraron equivalencias en la muestra tomada." << endl;
-    } else {
-        cout << "No hay suficientes pacientes (minimo 5) para el muestreo." << endl;
-    }
-
-    // Inciso k
-    cout << "\n--- Ortogonalidad de los dos primeros pacientes ---" << endl;
-    if (cantidadPacientes >= 2) {
-        int productoPunto = 0;
-        for (int k = 0; k < 5; k++) {
-            productoPunto += hospital[0].sintomasPorEspecialidad[k] * hospital[1].sintomasPorEspecialidad[k];
-        }
-
-        if (productoPunto == 0) {
-            cout << "Los vectores de sintomas son ORTOGONALES (Producto punto es 0)." << endl;
-        } else {
-            cout << "Los vectores NO son ortogonales (Producto punto: " << productoPunto << ")." << endl;
-        }
-    } else {
-        cout << "Se necesitan al menos 2 pacientes para este calculo." << endl;
-    }
+   
 
     return 0;
 }
