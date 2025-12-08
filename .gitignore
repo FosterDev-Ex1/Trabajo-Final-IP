@@ -1,41 +1,18 @@
-# Prerequisites
-*.d
+# Archivos binarios ejecutables
+*.exe
+*.out
 
-# Compiled Object files
-*.slo
-*.lo
+# Archivos objeto de compilación
 *.o
 *.obj
 
-# Precompiled Headers
-*.gch
-*.pch
+# Archivos de depuración y temporales
+*.log
+*~
 
-# Linker files
-*.ilk
+# Archivos de IDE comunes (Visual Studio, VS Code, etc.)
+.vscode/
+.vs/
 
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+# Archivos de proyecto generados automáticamente (si usas IDEs)
+*.pro.user
