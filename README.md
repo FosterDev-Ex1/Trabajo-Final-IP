@@ -1,5 +1,9 @@
-# Proyecto Final Introducción a la Programación / ICI
+# 🏥 Proyecto Final Programación I / ICI
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Lenguaje-C%2B%2B-blue?style=flat" alt="C++ Badge"/> 
+  <img src="https://img.shields.io/badge/Herramienta-Git-red?style=flat" alt="Git Badge"/>
+</p>
 ## Hospital Calixto García: Sistema de Monitoreo de Parámetros
 
 Este repositorio contiene el código fuente para el trabajo final de la asignatura de Programación I / ICI, cuyo objetivo es gestionar y clasificar el riesgo de pacientes en un entorno hospitalario.
